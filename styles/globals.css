@@ -30,8 +30,8 @@ nav{
   }
 
   nav{
-    width: calc(100vw - 10rem);
-    padding: 5rem;
+    width: calc(100vw - 5rem);
+    padding: 5rem 2.5rem;
   }
 }
 
@@ -155,8 +155,8 @@ nav .burger-active .line-2{
 
 @media only screen and (max-width: 768px){
   .hero-section{
-    margin: 12.5rem 0rem;
-    padding: 0rem 5rem;
+    margin: 5rem 0rem 20rem;
+    padding: 0rem 2.5rem;
   }
 
   .hero-section h1{
