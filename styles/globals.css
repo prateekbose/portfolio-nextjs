@@ -155,7 +155,7 @@ nav .burger-active .line-2{
 
 @media only screen and (max-width: 768px){
   .hero-section{
-    margin: 5rem 0rem;
+    margin: 12.5rem 0rem;
     padding: 0rem 5rem;
   }
 
@@ -179,7 +179,7 @@ nav .burger-active .line-2{
 
 @media only screen and (max-width: 768px){
   .home-projects{
-    margin: 0rem 2.5rem;
+    margin: 10rem 2.5rem;
     padding: 0rem;
     width: calc(100vw - 5rem);
     gap: 2.5rem;
