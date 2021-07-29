@@ -1,7 +1,7 @@
 import { animated, useSpring } from 'react-spring'
 import * as easings from 'd3-ease'
 
-export default function RevealText({ text="", index }){
+export default function RevealText({ text, index }){
     const textSplit = text.split(" ")
     console.table(textSplit)
     const RevealAnim = (i) => useSpring({
@@ -20,7 +20,7 @@ export default function RevealText({ text="", index }){
     return textSplit.map((item, index) => <span className="reveal" key={index}><animated.span style={RevealAnim(index*index/3)} key={index}>{item}&nbsp;</animated.span></span>)
 }
 
-RevealText.defaulProps = {
+RevealText.defaultProps = {
     text: "",
     index: 0
 }
