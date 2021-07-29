@@ -208,13 +208,17 @@ nav .burger-active .line-2{
 }
 
 .home-projects .home-project .project-image{
-  background: url('https://www.notion.so/image/https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F1774675%2Fscreenshots%2F14397179%2Fmedia%2Fa4391baedc9ef4fbe05319a7ca04905c.png?table=block&id=c05e4ae5-a1f6-4773-9b2f-8e38d71161da&spaceId=02b1fbef-9109-4235-90eb-bc3383f4dcb5&width=3490&userId=d4ef0dfc-eb64-4156-b1d9-8b3229f7703f&cache=v2');
+  background: url('https://assets.website-files.com/5fcfd9eca66cfc2e54be8b9a/609030622b26b32c3fe0a46e_p-kdcg.gif');
   height: 60rem;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   transition: 0.6s ease-in-out;
   overflow: hidden;
+}
+
+.home-projects .home-project:nth-of-type(odd) .project-image{
+  background: url('https://assets.website-files.com/5fcfd9eca66cfc2e54be8b9a/6090306e7b77ff4b988a2d02_p-ktl.gif');
 }
 
 @media only screen and (max-width: 768px){
