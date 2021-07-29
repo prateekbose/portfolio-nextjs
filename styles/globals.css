@@ -120,6 +120,7 @@ nav .nav-links a{
 
 @media only screen and (max-width: 768px){
   nav .nav-links a{
+    background: linear-gradient(to right,#101010 100%);
     font-size: 5rem;
     transition: opacity 0s linear, background 0.3s ease-in-out;
   }
@@ -130,16 +131,16 @@ nav .nav-links a{
   opacity: 1;
 }
 
-@media only screen and (max-width: 768px){
-  .nav-active .nav-links a{
-    transition: opacity 0.3s ease-in-out 1.2s, background 0.3s ease-in-out;
-  }
-}
-
 nav .nav-links a:hover{
   cursor: pointer;
   color: #303030;
   background-position: 0% 100%;
+}
+
+@media only screen and (max-width: 768px){
+  nav .nav-links a:hover{
+    color: white;
+  }
 }
 
 nav .burger{
