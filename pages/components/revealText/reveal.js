@@ -19,3 +19,8 @@ export default function RevealText({ text, index }){
     })
     return textSplit.map((item, index) => <span className="reveal" key={index}><animated.span style={RevealAnim(index*index/3)} key={index}>{item}&nbsp;</animated.span></span>)
 }
+
+RevealText.defaulProps = {
+    text: "",
+    index: 0
+}
