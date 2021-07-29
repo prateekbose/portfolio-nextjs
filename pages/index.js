@@ -6,7 +6,7 @@ import Projects from './components/homeProjects/projects'
 export default function Home() {
   return [
     <Head key={-1}>
-      <title>My page title</title>
+      <title>Prateek Bose</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>,
     <NavBar key={0}/>,
