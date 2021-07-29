@@ -1,7 +1,7 @@
 import { animated, useSpring } from 'react-spring'
 import * as easings from 'd3-ease'
 
-export default function RevealText({ text, index }){
+export default function RevealText({ text="", index }){
     const textSplit = text.split(" ")
     console.table(textSplit)
     const RevealAnim = (i) => useSpring({
