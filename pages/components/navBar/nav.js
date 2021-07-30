@@ -12,8 +12,8 @@ export default function NavBar(){
         <nav className={(menuOpen)?'nav-active':''}>
             <h1>Prateek Bose</h1>
             <div className={`nav-links ${(!menuOpen)?'nav-hide':''}`}>
-                <a className="nav-link">Projects</a>
-                <a className="nav-link">Blogs</a>
+                <a className="nav-link" href="./projects">Projects</a>
+                <a className="nav-link" href="./blogs">Blogs</a>
                 <a className="nav-link">About</a>
             </div>
             <div className={`burger ${(menuOpen)?'burger-active':''}`} onClick={() => openMenu()}>
