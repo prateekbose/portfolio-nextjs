@@ -215,7 +215,8 @@ nav .burger-active .line-2{
 
 @media only screen and (max-width: 768px){
   .hero-section{
-    margin: 5rem 0rem 20rem;
+    width: calc(100vw - 5rem);
+    margin: 5rem 0rem 10rem;
     padding: 0rem 2.5rem;
   }
 
@@ -247,8 +248,7 @@ nav .burger-active .line-2{
   }
 }
 
-.home-projects .home-project{
-  background: pink;
+.home-project{
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -268,7 +268,7 @@ nav .burger-active .line-2{
   cursor: pointer;
 }
 
-.home-projects .home-project .project-image{
+.home-project .project-image{
   background: url('https://assets.website-files.com/5fcfd9eca66cfc2e54be8b9a/609030622b26b32c3fe0a46e_p-kdcg.gif');
   height: 60rem;
   background-position: center center;
@@ -278,7 +278,7 @@ nav .burger-active .line-2{
   overflow: hidden;
 }
 
-.home-projects .home-project:nth-of-type(odd) .project-image{
+.home-project:nth-of-type(odd) .project-image{
   background: url('https://assets.website-files.com/5fcfd9eca66cfc2e54be8b9a/6090306e7b77ff4b988a2d02_p-ktl.gif');
   background-position: center center;
   background-repeat: no-repeat;
@@ -287,7 +287,7 @@ nav .burger-active .line-2{
 }
 
 @media only screen and (max-width: 768px){
-  .home-projects .home-project .project-image{
+  .home-project .project-image{
     height: 25rem;
   }
 }
@@ -296,7 +296,7 @@ nav .burger-active .line-2{
   transform: scale(1.1);
 }
 
-.home-projects .home-project .project-nav{
+.home-project .project-nav{
   display: flex;
   padding: 1rem 0rem;
   justify-content: space-between;
@@ -304,7 +304,7 @@ nav .burger-active .line-2{
   z-index: 10;
 }
 
-.home-projects .home-project .project-details{
+.home-project .project-details{
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -497,5 +497,20 @@ footer ul a{
   .home-blog-header{
     transform: translateY(0rem);
     margin: 0rem 2.5rem;
+  }
+}
+
+.page-cards{
+  margin: 10rem 36rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+@media only screen and (max-width: 768px){
+  .page-cards{
+    margin: 10rem 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 }
