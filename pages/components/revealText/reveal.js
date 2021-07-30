@@ -1,15 +1,16 @@
 import { animated, useSpring } from 'react-spring'
 import * as easings from 'd3-ease'
 
-export default function RevealText({ text, index }){
+export default function RevealText({ text, index, inView }){
     const textSplit = text.split(" ")
     console.table(textSplit)
+    console.log(inView)
     const RevealAnim = (i) => useSpring({
         from: {
             transform: 'translate(0%, 100%)'
         },
         to: {
-            transform: 'translate(0%, 0%)'
+            transform: (inView)?'translate(0%, 0%)':'translate(0%, 100%)'
         },
         delay: 150 + 100 * (index+i),
         config: {
@@ -22,5 +23,6 @@ export default function RevealText({ text, index }){
 
 RevealText.defaultProps = {
     text: "",
-    index: 0
+    index: 0,
+    inView: true
 }

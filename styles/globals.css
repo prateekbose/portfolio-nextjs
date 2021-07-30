@@ -204,11 +204,11 @@ nav .burger-active .line-2{
   letter-spacing: 0.005rem;
 }
 
-.hero-section h1 span, .hero-section h3 span{
+.reveal span{
   display: inline-block;
 }
 
-.hero-section h1 .reveal, .hero-section h3 .reveal{
+.reveal{
   display: inline-block;
   overflow: hidden;
 }
@@ -352,4 +352,136 @@ nav .burger-active .line-2{
 .home-project:hover .project-explore{
   transform: rotate(-45deg);
   filter: invert(1);
+}
+
+.skills-section{
+  width: calc(100vw - 52rem);
+  padding: 15rem 26rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-section .skills-header{
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+.skills-section .skills-mobile-header{
+  font-size: 6rem;
+  display: none;
+}
+
+.skills-section .skills-more{
+  font-size: 2rem;
+  font-weight: 800;
+  color: #202020;
+  text-transform: uppercase;
+  text-decoration: underline;
+  display: none;
+}
+
+.skills-section .skills{
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media only screen and (max-width: 768px){
+  .skills-section{
+    width: calc(100vw - 5rem);
+    padding: 5rem 2.5rem 10rem;
+    align-items: flex-start;
+  }
+
+  .skills-section .skills{
+    display: none;
+  }
+
+  .skills-section .skills-more{
+    display: block;
+  }
+
+  .skills-section .skills-header{
+    display: none;
+  }
+
+  .skills-section .skills-mobile-header{
+    display: block;
+  }
+}
+
+.skills-section .skills ul{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  list-style: none;
+}
+
+.skills-section .skills li{
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.05rem;
+}
+
+footer{
+  border-top: thin solid rgba(0,0,0,0.25);
+  width: calc(100vw - 72rem);
+  padding: 10rem 36rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  gap: 2rem;
+  color: white;
+  background-color: #101010;
+}
+
+@media only screen and (max-width: 768px){
+  footer{
+    width: calc(100vw - 5rem);
+    padding: 5rem 2.5rem;
+    flex-direction: column;
+  }
+}
+
+footer h1{
+  font-size: 5rem;
+  letter-spacing: -0.25rem;
+  font-weight: 600;
+  line-height: 6rem;
+}
+
+footer ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  list-style: none;
+}
+
+footer ul a{
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.1rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width: 768px){
+  footer ul{
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  footer ul li{
+    font-weight: 400;
+  }
 }

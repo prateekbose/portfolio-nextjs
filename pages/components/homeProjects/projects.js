@@ -12,7 +12,7 @@ export default function Projects(){
         to: {
             opacity: 1
         },
-        delay: 2000,
+        delay: 2000 + 500 * index,
         config: {
             duration: 900,
             easing: easings.easeCubic

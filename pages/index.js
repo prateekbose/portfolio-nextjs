@@ -2,6 +2,8 @@ import Head from 'next/head'
 import NavBar from './components/navBar/nav'
 import HeroSection from './components/heroSection/hero'
 import Projects from './components/homeProjects/projects'
+import HomeSkills from './components/HomeSkills/skills'
+import Footer from './components/footer/footer'
 
 export default function Home() {
   return [
@@ -11,6 +13,8 @@ export default function Home() {
     </Head>,
     <NavBar key={0}/>,
     <HeroSection key={1}/>,
-    <Projects key={2}/>
+    <Projects key={2}/>,
+    <HomeSkills key={3}/>,
+    <Footer key={4}/>
   ]
 }
