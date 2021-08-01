@@ -459,15 +459,20 @@ footer ul{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1.25rem;
   list-style: none;
+}
+
+footer ul h3{
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.05rem;
 }
 
 footer ul a{
   font-size: 1.75rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: -0.1rem;
+  font-weight: 300;
+  letter-spacing: -0.05rem;
   display: flex;
   gap: 1.25rem;
   align-items: center;
@@ -481,8 +486,13 @@ footer ul a{
     justify-content: flex-start;
   }
 
-  footer ul li{
-    font-weight: 400;
+  footer ul li:first-of-type{
+    display: none;
+  }
+
+  footer ul a{
+    font-size: 2rem;
+    font-weight: 300;
   }
 }
 

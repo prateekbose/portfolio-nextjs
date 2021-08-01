@@ -4,14 +4,14 @@ import Footer from '../components/footer/footer'
 import HeroSection from '../components/heroSection/hero'
 import Cards from '../components/pageCards/pages'
 
-export default function Home() {
+export default function Blogs() {
   return [
     <Head key={-1}>
-      <title>Prateek Bose</title>
+      <title>Prateek Bose | Blogs</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>,
     <NavBar key={0}/>,
-    <HeroSection key={1} header={"My two cents on things I work with"} sub={"Blogs"}/>,
+    <HeroSection key={1} header={"My two cents on things I find fascinating"} sub={"Blogs"}/>,
     <Cards key={2}/>,
     <Footer key={4}/>
   ]

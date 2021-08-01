@@ -4,10 +4,10 @@ import Footer from '../components/footer/footer'
 import HeroSection from '../components/heroSection/hero'
 import Cards from '../components/pageCards/pages'
 
-export default function Home() {
+export default function Projects() {
   return [
     <Head key={-1}>
-      <title>Prateek Bose</title>
+      <title>Prateek Bose | Projects</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>,
     <NavBar key={0}/>,
