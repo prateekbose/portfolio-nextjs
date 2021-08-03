@@ -12,7 +12,7 @@ export default function Projects() {
     </Head>,
     <NavBar key={0}/>,
     <HeroSection key={1} header={"A detailed look on projects I have worked on"} sub={"Projects"}/>,
-    <Cards key={2}/>,
+    <Cards key={2} page={"projects"}/>,
     <Footer key={4}/>
   ]
 }
