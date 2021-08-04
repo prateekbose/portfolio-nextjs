@@ -225,7 +225,7 @@ nav .burger-active .line-2{
 
 .hero-section .hero-stack{
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   font-size: 1.75rem;
 }
 
@@ -569,7 +569,7 @@ a{
 }
 
 .blog-image{
-  margin: 0rem 26rem;
+  margin: 2.5rem 26rem;
   height: 60rem;
   width: calc(100vw - 52rem);
   background-repeat: no-repeat;

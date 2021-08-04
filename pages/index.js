@@ -14,7 +14,7 @@ export default function Home() {
     <NavBar key={0}/>,
     <HeroSection key={1} header={"I develop amazing experiences on Web and Mobile"} sub={"Hello"}/>,
     <Projects key={2}/>,
-    <Blogs key={3}/>,
+    // <Blogs key={3}/>,
     <Footer key={4}/>
   ]
 }

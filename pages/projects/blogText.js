@@ -1,7 +1,7 @@
 import HeroSection from "../components/heroSection/hero"
 
 export default function BlogText({ projectName, project }){
-    console.log(project)
+    // console.log(project)
     return project.map((item, index) => {
         if(item.type === "header"){
             return (

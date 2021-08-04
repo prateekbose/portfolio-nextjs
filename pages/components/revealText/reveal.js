@@ -3,8 +3,7 @@ import * as easings from 'd3-ease'
 
 export default function RevealText({ text, index, inView }){
     const textSplit = text.split(" ")
-    console.table(textSplit)
-    console.log(inView)
+    // console.table(textSplit)
     const RevealAnim = (i) => useSpring({
         from: {
             transform: 'translate(0%, 100%)'
