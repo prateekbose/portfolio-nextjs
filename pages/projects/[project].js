@@ -6,7 +6,7 @@ import Footer from '../components/footer/footer'
 
 const projects = {
   "travelaholic": [
-    {type: "header", text: "Recommending new places to visit for travellers", stack: ["PHP","MySQL"]},
+    {type: "header", text: "Recommending new places to visit for travellers", stack: ["PHP","MySQL"], year: 2020, roles: ["Web Design", "Development"]},
     {type: "text", text: "When you travel, you meet new people, and cultures, go through different experiences (for better or worse), and perhaps even change your perspective on things and life as a whole. You meet new people and visit new places, so you learn and gain information, this shapes you into a better person."},
     {type: "image", url: "https://images.unsplash.com/photo-1533850595620-7b1711221751?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80"},
     {type: "text", text: "So what I wanted to make was a place where I could get suggestions for places I could visit as per what I would prefer to do. After a place was suggested, I would like to see the details for reference like local places and also the flight fares."},

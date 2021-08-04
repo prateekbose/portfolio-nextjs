@@ -5,7 +5,7 @@ export default function BlogText({ projectName, project }){
     return project.map((item, index) => {
         if(item.type === "header"){
             return (
-                <HeroSection key={index} header={item.text} sub={projectName} stack={project.stack}/>
+                <HeroSection key={index} header={item.text} sub={projectName} stack={item.stack} year={item.year} roles={item.roles}/>
             )
         } else if (item.type === "text"){
             return (

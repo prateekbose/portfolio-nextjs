@@ -210,6 +210,33 @@ nav .burger-active .line-2{
   letter-spacing: 0.005rem;
 }
 
+.hero-section .hero-details{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px){
+  .hero-section .hero-details{
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.hero-section .hero-stack{
+  display: flex;
+  gap: 1rem;
+  font-size: 1.75rem;
+}
+
+.hero-section .hero-stack h3{
+  font-weight: 500;
+}
+
+.hero-section .hero-stack h3:first-of-type{
+  font-weight: 700;
+}
+
 .reveal span{
   display: inline-block;
 }
