@@ -4,7 +4,7 @@ import NavBar from '../components/navBar/nav'
 import BlogText from './blogText'
 import Footer from '../components/footer/footer'
 import AltProjects from '../components/altProjects/altProjects'
-import ProjectsData from '../data'
+import ProjectsData from '../../public/data'
 
 const Project = () => {
   const router = useRouter()

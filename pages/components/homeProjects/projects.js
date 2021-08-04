@@ -2,7 +2,7 @@ import Image from 'next/image'
 import arrow from './arrow-right.svg'
 import { animated, useSpring } from 'react-spring'
 import * as easings from 'd3-ease'
-import ProjectsData from '../../data'
+import ProjectsData from '../../../public/data'
 
 export default function Projects(){
 

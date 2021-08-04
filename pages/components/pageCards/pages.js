@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import RevealText from '../revealText/reveal'
 import arrow from './arrow-right.svg'
-import ProjectsData from '../../data'
+import ProjectsData from '../../../public/data'
 export default function Cards({page}){
 
     const Projects = () => {        
