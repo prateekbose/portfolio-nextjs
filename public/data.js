@@ -9,7 +9,7 @@ let ProjectsData = {
       {type: "image", url: "/projects/travelaholic/2.jpg"},
       {type: "image", url: "/projects/travelaholic/3.jpg"},
       {type: "image", url: "/projects/travelaholic/4.jpg"},
-      {type: "links", source: [{text: "Visit the Live Website", link: "travelaholic.000webhostapp.com"}, {text: "View on Github", link: "github.com/prateekbose/travelaholic"}]},
+      {type: "links", source: [{text: "Visit the Live Website", link: "travelaholic.000webhostapp.com", name: "travelaholic.000webhostapp.com"}, {text: "View on Github", link: "github.com/prateekbose/travelaholic", name: "prateekbose/travelaholic"}]},
     ],
     "hungri": [
       {type: "header", text: "Solving World Hunger by partying and utilizing city's resources", stack: ["React", "Firebase", "Heroku"], year: 2020, roles: ["Web Design", "Development"]},
@@ -20,7 +20,7 @@ let ProjectsData = {
       {type: "image", url:"/projects/hungri/1.jpg"},
       {type: "image", url:"/projects/hungri/2.jpg"},
       {type: "image", url:"/projects/hungri/4.jpg"},
-      {type: "links", source: [{text: "Visit the Live Website", link: "hungri.vercel.app"}, {text: "View on Github", link: "github.com/prateekbose/hungri-front-end"}]},
+      {type: "links", source: [{text: "Visit the Live Website", link: "hungri.vercel.app", name: "hungri.vercel.app"}, {text: "View on Github", link: "github.com/prateekbose/hungri-front-end", name: "prateekbose/hungri-front-end"}]},
     ]
   }
 

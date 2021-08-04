@@ -20,7 +20,7 @@ export default function BlogText({ projectName, project }){
                 <div className="blog-links">
                     {item.source.map((it, i) => (<div className="blog-link" key={i}>
                             <h3>{it.text}</h3>
-                            <a href={`https://${it.link}`} target="_blank" rel="noopener noreferrer">{it.link}</a>
+                            <a href={`https://${it.link}`} target="_blank" rel="noopener noreferrer">{it.name}</a>
                         </div>))}
                 </div>
             )
