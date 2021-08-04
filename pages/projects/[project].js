@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import NavBar from '../components/navBar/nav'
-import HeroSection from '../components/heroSection/hero'
 import BlogText from './blogText'
 
 const projects = {
@@ -23,7 +22,7 @@ const Project = () => {
       <title>Prateek Bose | Projects</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>,
-    <NavBar key={0}/>,
+    <NavBar key={0} page={"post"}/>,
     <BlogText project={projects[project]} projectName={project} key={2}/>
   ]
 }

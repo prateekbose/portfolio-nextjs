@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function NavBar(){
+export default function NavBar({ page }){
 
     const [menuOpen, setMenuOpen] = useState(false)
 
@@ -12,8 +12,8 @@ export default function NavBar(){
         <nav className={(menuOpen)?'nav-active':''}>
             <h1>Prateek Bose</h1>
             <div className={`nav-links ${(!menuOpen)?'nav-hide':''}`}>
-                <a className="nav-link" href="./projects">Projects</a>
-                <a className="nav-link" href="./blogs">Blogs</a>
+                <a className="nav-link" href={`.${(page === "post")?".":""}/projects`}>Projects</a>
+                <a className="nav-link" href={`.${(page === "post")?".":""}/blogs`}>Blogs</a>
                 {/* <a className="nav-link">About</a> */}
             </div>
             <div className={`burger ${(menuOpen)?'burger-active':''}`} onClick={() => openMenu()}>
@@ -22,4 +22,8 @@ export default function NavBar(){
             </div>
         </nav>
     )
+}
+
+NavBar.defaultProps = {
+    page: ""
 }
