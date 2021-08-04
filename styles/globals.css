@@ -621,3 +621,25 @@ a{
     font-size: 3rem;
   }
 }
+
+.add-project{
+  margin: 10rem 36rem 2.5rem;
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: -0.05rem;
+}
+
+.alt-projects{
+  margin: 0rem 36rem 10rem;
+}
+
+@media only screen and (max-width: 768px){
+  .add-project{
+    margin: 5rem 2.5rem 2.5rem;
+    font-size: 3.5rem;
+  }
+
+  .alt-projects{
+    margin: 0rem 2.5rem 5rem;
+  }
+}

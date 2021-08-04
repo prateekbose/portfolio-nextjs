@@ -3,6 +3,7 @@ import Head from 'next/head'
 import NavBar from '../components/navBar/nav'
 import BlogText from './blogText'
 import Footer from '../components/footer/footer'
+import AltProjects from '../components/altProjects/altProjects'
 
 const projects = {
   "travelaholic": [
@@ -20,7 +21,6 @@ const projects = {
 const Project = () => {
   const router = useRouter()
   const { project } = router.query
-  console.log(router)
   return [
     <Head key={-1}>
       <title>Prateek Bose | Projects</title>
@@ -28,7 +28,8 @@ const Project = () => {
     </Head>,
     <NavBar key={0} page={"post"}/>,
     <BlogText project={projects[project]} projectName={project} key={2}/>,
-    <Footer key={3}/>
+    <AltProjects project={projects} projectName={project} key={3}/>,
+    <Footer key={4}/>
   ]
 }
 
