@@ -36,5 +36,6 @@ HeroSection.defaultProps = {
     header: "",
     sub: "",
     stack: [],
-    year: -1
+    year: -1,
+    roles: []
 }
