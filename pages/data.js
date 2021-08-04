@@ -1,4 +1,4 @@
-const ProjectsData = {
+let ProjectsData = {
     "travelaholic": [
       {type: "header", text: "Recommending new places to visit for travellers", stack: ["PHP","MySQL"], year: 2020, roles: ["Web Design", "Development"]},
       {type: "text", text: "When you travel, you meet new people, and cultures, go through different experiences (for better or worse), and perhaps even change your perspective on things and life as a whole. You meet new people and visit new places, so you learn and gain information, this shapes you into a better person."},
