@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import NavBar from '../components/navBar/nav'
 import BlogText from './blogText'
+import Footer from '../components/footer/footer'
 
 const projects = {
   "travelaholic": [
@@ -26,7 +27,8 @@ const Project = () => {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>,
     <NavBar key={0} page={"post"}/>,
-    <BlogText project={projects[project]} projectName={project} key={2}/>
+    <BlogText project={projects[project]} projectName={project} key={2}/>,
+    <Footer key={3}/>
   ]
 }
 

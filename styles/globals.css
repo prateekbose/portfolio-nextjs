@@ -434,15 +434,14 @@ nav .burger-active .line-2{
 }
 
 footer{
-  border-top: thin solid rgba(0,0,0,0.25);
+  border-top: thin solid rgba(0,0,0,0.15);
   width: calc(100vw - 72rem);
   padding: 10rem 36rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between; 
   gap: 2rem;
-  color: white;
-  background-color: #101010;
+  color: black;
 }
 
 @media only screen and (max-width: 768px){
@@ -454,7 +453,7 @@ footer{
 }
 
 footer h1{
-  font-size: 5rem;
+  font-size: 4.5rem;
   letter-spacing: -0.25rem;
   font-weight: 600;
   line-height: 6rem;
@@ -477,13 +476,13 @@ footer ul h3{
 
 footer ul a{
   font-size: 1.75rem;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: -0.05rem;
   display: flex;
   gap: 1.25rem;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 @media only screen and (max-width: 768px){
