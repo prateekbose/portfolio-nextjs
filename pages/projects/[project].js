@@ -10,6 +10,9 @@ const projects = {
     {type: "image", url: "https://images.unsplash.com/photo-1533850595620-7b1711221751?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80"},
     {type: "text", text: "So what I wanted to make was a place where I could get suggestions for places I could visit as per what I would prefer to do. After a place was suggested, I would like to see the details for reference like local places and also the flight fares."},
     {type: "image", url: "/projects/travelaholic/0.jpg"},
+    {type: "image", url: "/projects/travelaholic/1.jpg"},
+    {type: "image", url: "/projects/travelaholic/2.jpg"},
+    {type: "links", source: [{text: "Visit the Live Website", link: "travelaholic.000webhostapp.com"}, {text: "View on Github", link: "github.com/prateekbose/travelaholic"}]},
   ]
 }
 

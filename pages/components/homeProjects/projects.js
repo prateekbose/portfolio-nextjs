@@ -21,36 +21,59 @@ export default function Projects(){
 
     return (
         <section className="home-projects">
-            <animated.div className="home-project" style={ProjectReveal(1)}>
-                <div className="project-image"></div>
-                <div className="project-nav">
-                    <div className="project-details">
-                        <h1>Project Name</h1>
-                        <h3>Project Details</h3>
+            
+            <animated.a href={`./projects/travelaholic`} style={ProjectReveal(0)}>
+                <div className="home-project">
+                    <div className="project-image"></div>
+                    <div className="project-nav">
+                        <div className="project-details">
+                            <h1>Blog 1</h1>
+                            <h3>Blog Details</h3>
+                        </div>
+                        <button className="project-explore"><Image src={arrow} alt=""/></button>
                     </div>
-                    <button className="project-explore"><Image src={arrow} alt=""/></button>
                 </div>
-            </animated.div>
-            <animated.div className="home-project" style={ProjectReveal(0)}>
-                <div className="project-image"></div>
-                <div className="project-nav">
-                    <div className="project-details">
-                        <h1>Project Name</h1>
-                        <h3>Project Details</h3>
+            </animated.a>
+            
+            <animated.a href={`./projects/travelaholic`} style={ProjectReveal(1)}>
+                <div className="home-project">
+                    <div className="project-image"></div>
+                    <div className="project-nav">
+                        <div className="project-details">
+                            <h1>Blog 1</h1>
+                            <h3>Blog Details</h3>
+                        </div>
+                        <button className="project-explore"><Image src={arrow} alt=""/></button>
                     </div>
-                    <button className="project-explore"><Image src={arrow} alt=""/></button>
                 </div>
-            </animated.div>
-            <animated.div className="home-project" style={ProjectReveal(1)}>
-                <div className="project-image"></div>
-                <div className="project-nav">
-                    <div className="project-details">
-                        <h1>Project Name</h1>
-                        <h3>Project Details</h3>
+            </animated.a>
+            
+            <animated.a href={`./projects/travelaholic`} style={ProjectReveal(0)}>
+                <div className="home-project">
+                    <div className="project-image"></div>
+                    <div className="project-nav">
+                        <div className="project-details">
+                            <h1>Blog 1</h1>
+                            <h3>Blog Details</h3>
+                        </div>
+                        <button className="project-explore"><Image src={arrow} alt=""/></button>
                     </div>
-                    <button className="project-explore"><Image src={arrow} alt=""/></button>
                 </div>
-            </animated.div>
+            </animated.a>
+            
+            <animated.a href={`./projects/travelaholic`} style={ProjectReveal(1)}>
+                <div className="home-project">
+                    <div className="project-image"></div>
+                    <div className="project-nav">
+                        <div className="project-details">
+                            <h1>Blog 1</h1>
+                            <h3>Blog Details</h3>
+                        </div>
+                        <button className="project-explore"><Image src={arrow} alt=""/></button>
+                    </div>
+                </div>
+            </animated.a>
+            
             
         </section>
     )
