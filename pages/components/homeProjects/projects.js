@@ -3,6 +3,7 @@ import arrow from './arrow-right.svg'
 import { animated, useSpring } from 'react-spring'
 import * as easings from 'd3-ease'
 import ProjectsData from '../../../public/data'
+import Cover from '../../../public/cover'
 
 export default function Projects(){
 
@@ -26,7 +27,7 @@ export default function Projects(){
         return arr.map((item, index) => (
             <animated.a href={`./projects/${item}`} key={index} style={ProjectReveal(index%2)}>
                 <div className="home-project">
-                    <div className="project-image"></div>
+                <div className="project-image" style={{ backgroundImage: `url('${Cover[item]}')` }}></div>
                     <div className="project-nav">
                         <div className="project-details">
                             <h1>{item}</h1>

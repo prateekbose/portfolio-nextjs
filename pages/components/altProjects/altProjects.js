@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import arrow from './arrow-right.svg'
+import Cover from '../../../public/cover'
 export default function AltProjects({ project, projectName }){
     const Projects = () => {        
         let arr = []
@@ -12,7 +13,7 @@ export default function AltProjects({ project, projectName }){
         return arr.map((item, index) => (
             <a href={`../projects/${item}`} key={index}>
                 <div className="home-project">
-                    <div className="project-image"></div>
+                <div className="project-image" style={{ backgroundImage: `url('${Cover[item]}')` }}></div>
                     <div className="project-nav">
                         <div className="project-details">
                             <h1>{item}</h1>
