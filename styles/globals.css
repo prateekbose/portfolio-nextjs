@@ -35,6 +35,17 @@ nav{
   }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1360px){
+  html{
+    font-size: 7.5px;
+  }
+  
+  nav{
+    width: calc(100vw - 30rem);
+    padding: 5rem 15rem;
+  }
+}
+
 @media only screen and (min-width: 1366px) and (max-width: 1600px){
   html{
     font-size: 8px;
@@ -173,6 +184,12 @@ nav .burger .burger-line{
   }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1360px){
+  nav .burger .burger-line{
+    height: 0.33rem;
+  }
+}
+
 .nav-active .burger .burger-line{
   background-color: white;
 }
@@ -263,6 +280,23 @@ nav .burger-active .line-2{
   }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1360px){
+  .hero-section{
+    width: calc(100vw - 40rem);
+    margin: 5rem 0rem 10rem;
+    padding: 0rem 20rem;
+  }
+
+  .hero-section h1{
+    font-size: 6rem;
+    line-height: 7rem;
+  }
+
+  .hero-section h3{
+    font-size: 1.5rem;
+  }
+}
+
 .home-projects{
   width: calc(100vw - 72rem);
   margin: 15rem 26rem;
@@ -273,6 +307,15 @@ nav .burger-active .line-2{
 }
 
 @media only screen and (max-width: 768px){
+  .home-projects{
+    margin: 0rem 20rem 10rem;
+    padding: 0rem;
+    width: calc(100vw - 40rem);
+    gap: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1360px){
   .home-projects{
     margin: 0rem 2.5rem 10rem;
     padding: 0rem;
@@ -479,6 +522,13 @@ footer{
   }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1360px){
+  footer{
+    width: calc(100vw - 40rem);
+    padding: 5rem 20rem;
+  }
+}
+
 footer h1{
   font-size: 4.5rem;
   letter-spacing: -0.25rem;
@@ -562,6 +612,15 @@ a{
   }
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1360px){
+  .page-cards{
+    margin: 0rem 20rem 10rem;
+    padding: 0rem;
+    width: calc(100vw - 40rem);
+    gap: 2.5rem;
+  }
+}
+
 .blog-text{
   padding: 10rem 36rem;
   font-size: 2rem;
@@ -641,5 +700,16 @@ a{
 
   .alt-projects{
     margin: 0rem 2.5rem 5rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1360px){
+  .add-project{
+    margin: 5rem 20rem 2.5rem;
+    font-size: 3.5rem;
+  }
+
+  .alt-projects{
+    margin: 0rem 20rem 5rem;
   }
 }
