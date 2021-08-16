@@ -7,7 +7,7 @@ import Cards from '../components/pageCards/pages'
 export default function Projects() {
   return [
     <Head key={-1}>
-      <title>Prateek Bose | Projects</title>
+      <title>Projects &#8212; Prateek Bose</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>,
     <NavBar key={0}/>,

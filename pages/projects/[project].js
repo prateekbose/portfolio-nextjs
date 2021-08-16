@@ -11,7 +11,7 @@ const Project = () => {
   const { project } = router.query
   return [
     <Head key={-1}>
-      <title>Prateek Bose | {project}</title>
+      <title>{`${project} \u2014 `}Prateek Bose</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>,
     <NavBar key={0} page={"post"}/>,
