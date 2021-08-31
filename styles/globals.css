@@ -507,6 +507,7 @@ footer{
   border-top: thin solid rgba(0,0,0,0.15);
   width: calc(100vw - 72rem);
   padding: 10rem 36rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between; 
@@ -622,9 +623,32 @@ a{
 }
 
 .blog-text{
-  padding: 10rem 36rem;
+  padding: 1.75rem 36rem;
   font-size: 2rem;
   letter-spacing: -0.03rem;
+}
+
+.blog-section-text{
+  padding: 0.5rem 36rem;
+}
+
+.blog-head{
+  padding: 0rem 36rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.075rem;
+}
+
+.blog-code{
+  background-color: #1E1E1E;
+  margin: 1rem 36rem;
+  padding: 1.5rem 1.5rem 2rem;
+  font-size: 1.5rem;
+}
+
+code{
+  font-family: 'Consolas', 'Courier New', monospace;
 }
 
 .blog-image{
@@ -659,15 +683,28 @@ a{
   border-bottom: thin solid #101010;
 }
 
+.blog-section{
+  padding: 2.5rem 0rem;
+}
+
 @media only screen and (max-width: 768px){
   .blog-text{
-    padding: 5rem 2.5rem;
+    padding: 0rem 2.5rem 1.5rem;
   }
 
   .blog-image{
     margin: 0rem 2.5rem;
     width: calc(100vw - 5rem);
     height: 30rem;
+  }
+  
+  .blog-head{
+    padding: 0rem;
+    margin: 0rem 2.5rem;
+  }
+
+  .blog-code{
+    margin: 0rem 2.5rem;
   }
 
   .blog-links{
@@ -678,6 +715,10 @@ a{
 
   .blog-link a{
     font-size: 3rem;
+  }
+
+  .blog-section{
+    padding: 1rem 0rem;
   }
 }
 
@@ -712,4 +753,120 @@ a{
   .alt-projects{
     margin: 0rem 20rem 5rem;
   }
+}
+
+/*
+ * Visual Studio 2015 dark style
+ * Author: Nicolas LLOBERA <nllobera@gmail.com>
+ */
+
+ .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #1E1E1E;
+  color: #DCDCDC;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-symbol,
+.hljs-name {
+  color: #569CD6;
+}
+.hljs-link {
+  color: #569CD6;
+  text-decoration: underline;
+}
+
+.hljs-built_in,
+.hljs-type {
+  color: #4EC9B0;
+}
+
+.hljs-number,
+.hljs-class {
+  color: #B8D7A3;
+}
+
+.hljs-string,
+.hljs-meta-string {
+  color: #D69D85;
+}
+
+.hljs-regexp,
+.hljs-template-tag {
+  color: #9A5334;
+}
+
+.hljs-subst,
+.hljs-function,
+.hljs-title,
+.hljs-params,
+.hljs-formula {
+  color: #DCDCDC;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #57A64A;
+  font-style: italic;
+}
+
+.hljs-doctag {
+  color: #608B4E;
+}
+
+.hljs-meta,
+.hljs-meta-keyword,
+.hljs-tag {
+  color: #9B9B9B;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+  color: #BD63C5;
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-builtin-name {
+  color: #9CDCFE;
+}
+
+.hljs-section {
+  color: gold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/*.hljs-code {
+  font-family:'Monospace';
+}*/
+
+.hljs-bullet,
+.hljs-selector-tag,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #D7BA7D;
+}
+
+.hljs-addition {
+  background-color: #144212;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #600;
+  display: inline-block;
+  width: 100%;
 }

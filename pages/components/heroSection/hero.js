@@ -1,6 +1,6 @@
 import RevealText from '../revealText/reveal'
 
-export default function HeroSection({ header, sub, stack, year, roles }){
+export default function HeroSection({ header, sub, stack, year, roles, pre, date }){
     const Stacks = ({stack}) => {
         return stack.map((item, index) => <h3 className={(index == 0)?'header':''} key={index}><RevealText text={item} index={14+index*3}/></h3>)
     }
@@ -27,6 +27,18 @@ export default function HeroSection({ header, sub, stack, year, roles }){
                         <Stacks stack={stack}/>
                     </div>
                 ): null}
+                {(pre.length > 0)?(
+                    <div className="hero-stack">
+                        <h3><RevealText text={"Stack"} index={12}/></h3>
+                        <Stacks stack={pre}/>
+                    </div>
+                ): null}
+                {(date.length > 0)?(
+                    <div className="hero-stack">
+                        <h3><RevealText text={"Published"} index={12}/></h3>
+                        <h3><RevealText text={`${date}`} index={14}/></h3>
+                    </div>
+                ): null}
             </div>
         </section>
     )
@@ -37,5 +49,7 @@ HeroSection.defaultProps = {
     sub: "",
     stack: [],
     year: -1,
-    roles: []
+    roles: [],
+    pre: "",
+    date: ""
 }

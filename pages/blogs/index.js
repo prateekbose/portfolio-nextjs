@@ -7,7 +7,7 @@ import Cards from '../components/pageCards/pages'
 export default function Blogs() {
   return [
     <Head key={-1}>
-      <title>Prateek Bose | Blogs</title>
+      <title>Prateek Bose {' \u2014 '} Blogs</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>,
     <NavBar key={0}/>,
