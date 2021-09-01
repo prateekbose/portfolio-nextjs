@@ -29,6 +29,7 @@ export default function BlogText({ projectName, project, date, pre }){
             return (
                 <div className="blog-code blog-section-code">
                     <Highlight language="javascript">{item.text}</Highlight>
+                    <button className="code-copy">Copy</button>
                 </div>
             )
         } else if(item.type == "head"){

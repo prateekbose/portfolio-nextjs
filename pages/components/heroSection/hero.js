@@ -29,7 +29,7 @@ export default function HeroSection({ header, sub, stack, year, roles, pre, date
                 ): null}
                 {(pre.length > 0)?(
                     <div className="hero-stack">
-                        <h3><RevealText text={"Stack"} index={12}/></h3>
+                        <h3><RevealText text={"Prerequisites"} index={12}/></h3>
                         <Stacks stack={pre}/>
                     </div>
                 ): null}

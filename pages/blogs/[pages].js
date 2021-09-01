@@ -14,7 +14,7 @@ const Project = () => {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>,
     <NavBar key={0} page={"post"}/>,
-    <BlogText project={BlogsData[String("react-spring")]} projectName={blog} date={"26-05-2001"} pre={["React", "JavaScript", "CSS"]} key={3}/>,
+    <BlogText project={BlogsData[String("react-spring")]} projectName={"React Spring"} date={"26-05-2001"} pre={["React", "JavaScript", "CSS"]} key={3}/>,
     <Footer key={4}/>
   ]
 }
