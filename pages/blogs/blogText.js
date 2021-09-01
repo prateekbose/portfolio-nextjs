@@ -1,8 +1,16 @@
 import HeroSection from "../components/heroSection/hero"
+import { useState } from 'react'
 import Highlight from 'react-highlight'
 
 export default function BlogText({ projectName, project, date, pre }){
     // console.log(project)
+    const [copy, setCopy] = useState(-1)
+    const Copy = (text, index) => {
+        setCopy(index)
+        navigator.clipboard.writeText(text)
+        setTimeout(() => setCopy(-1), 1500)
+    }
+
     return project.map((item, index) => {
         if(item.type === "header"){
             return (
@@ -29,7 +37,7 @@ export default function BlogText({ projectName, project, date, pre }){
             return (
                 <div className="blog-code blog-section-code">
                     <Highlight language="javascript">{item.text}</Highlight>
-                    <button className="code-copy">Copy</button>
+                    <button className={`code-copy ${(copy === index)?'code-copied':''}`} onClick={() => Copy(item.text, index)}>{(copy === index)?"Copied":"Copy"}</button>
                 </div>
             )
         } else if(item.type == "head"){
@@ -45,7 +53,7 @@ export default function BlogText({ projectName, project, date, pre }){
         } else if(item.type == "section"){
             return ( 
                 <div className="blog-section">
-                    <BlogText project={item.content}/>\
+                    <BlogText project={item.content}/>
                 </div>
             )
         }

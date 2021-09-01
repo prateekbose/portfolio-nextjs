@@ -669,6 +669,11 @@ a{
   cursor: pointer;
 }
 
+.blog-code .code-copied{
+  background-color: white;
+  color: #1E1E1E;
+}
+
 code{
   font-family: 'Consolas', 'Courier New', monospace;
   color: #C70039;
@@ -731,6 +736,10 @@ code{
   .blog-code{
     margin: 0rem 2.5rem;
     font-size: 1.75rem;
+  }
+
+  .blog-code button{
+    display: none;
   }
 
   .blog-links{

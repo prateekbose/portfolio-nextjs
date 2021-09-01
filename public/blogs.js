@@ -6,8 +6,10 @@ let BlogsData = {
         {type: "section", content: [
           {type: "head", text: "Prerequisites"},
           {type: "text", text: "While React Spring provides both hook-based and component-based APIs, for the article we’ll exclusively look at the hook-based API for all of the animations."},
-          {type: "text", text: "For adding the package to your React project,"},
-          {type: "code", text: "//For NPM\nnpm install react-spring d3-ease \n\n//For yarn \nyarn add react-spring d3-ease"},
+          {type: "text", text: "For adding the package to your React project,\n For NPM"},
+          {type: "code", text: "npm install react-spring d3-ease"},
+          {type: "text", text: "For yarn"},
+          {type: "code", text: "yarn add react-spring d3-ease"},
           {type: "text", text: "Here we’re also adding the package d3-ease for using different easing functions to our animations without creating our own, but also having smoother animations and having endless easing functions at our disposal."},]},
         {type: "section", content: [
           {type: "head", text: "React Spring Hooks"},
