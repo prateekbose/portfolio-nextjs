@@ -624,8 +624,8 @@ a{
 
 .blog-text{
   padding: 1.75rem 36rem;
-  font-size: 2rem;
-  letter-spacing: -0.03rem;
+  font-size: 1.75rem;
+  letter-spacing: -0.07rem;
 }
 
 .blog-section-text{
@@ -633,7 +633,7 @@ a{
 }
 
 .blog-head{
-  padding: 0rem 36rem;
+  padding: 0rem 36rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -684,7 +684,7 @@ code{
 }
 
 .blog-section{
-  padding: 2.5rem 0rem;
+  padding: 3rem 0rem;
 }
 
 @media only screen and (max-width: 768px){
