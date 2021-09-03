@@ -617,6 +617,10 @@ a{
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
+
+  .page-cards a:first-of-type{
+    grid-column: 1/2;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1360px){
