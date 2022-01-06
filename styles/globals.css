@@ -727,7 +727,7 @@ code{
 
 .code-sandbox{
   margin: 2.5rem 36rem;
-  width: calc(100vw - 72rem);
+  width: calc(100vw - 73.5rem);
   height: 45vh;
   border: none;
   overflow: hidden;
@@ -775,7 +775,7 @@ code{
   }
 
   .code-sandbox{
-    margin: 0rem 2.5rem;
+    margin: 2.5rem;
     width: calc(100vw - 5rem);
   }
 }
