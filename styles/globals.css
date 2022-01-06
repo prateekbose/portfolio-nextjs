@@ -915,3 +915,11 @@ code{
   display: inline-block;
   width: 100%;
 }
+
+.code-sandbox{
+  padding: 2.5rem 36rem;
+  width: calc(100vw - 72rem);
+  height: 45vh;
+  border: none;
+  overflow: hidden;
+}
