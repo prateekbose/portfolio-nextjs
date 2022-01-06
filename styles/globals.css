@@ -725,6 +725,14 @@ code{
   padding: 3rem 0rem;
 }
 
+.code-sandbox{
+  margin: 2.5rem 36rem;
+  width: calc(100vw - 72rem);
+  height: 45vh;
+  border: none;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 768px){
   .blog-text{
     padding: 1rem 2.5rem;
@@ -764,6 +772,11 @@ code{
 
   .blog-section{
     padding: 1rem 0rem;
+  }
+
+  .code-sandbox{
+    margin: 0rem 2.5rem;
+    width: calc(100vw - 5rem);
   }
 }
 
@@ -914,12 +927,4 @@ code{
   background-color: #600;
   display: inline-block;
   width: 100%;
-}
-
-.code-sandbox{
-  padding: 2.5rem 36rem;
-  width: calc(100vw - 72rem);
-  height: 45vh;
-  border: none;
-  overflow: hidden;
 }
