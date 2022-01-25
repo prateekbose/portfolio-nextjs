@@ -46,9 +46,24 @@ export default function BlogText({ projectName, project, date, pre }){
                     <h1>{item.text}</h1>
                 </div>
             )
+        } else if(item.type == "link-text"){
+            return (
+                <p className="blog-text blog-section-text">{item.textback}<a href={item.url}><code className="code-text">{item.text}</code></a></p>
+            )
         } else if(item.type == "code-text"){
             return (
-                <p className="blog-text blog-section-text">{item.textback}<code>{item.code}</code>{item.textfront}</p>
+                <p className="blog-text blog-section-text">{item.textback}<code className="code-text">{item.code}</code>{item.textfront}</p>
+            )
+        } else if(item.type == "code-text-mul"){
+            return (
+                <p className="blog-text blog-section-text">{
+                    item.text.map((item, key) => {
+                        if(item.type == "code") return (<code className="code-text" key={key}>{item.text}</code>)
+                        else if(item.type == "link") return (<a href={item.url}><code className="code-text" key={key}>{item.text}</code></a>)
+                        else return item.text
+                    })
+                }
+                </p>
             )
         } else if(item.type == "section"){
             return ( 

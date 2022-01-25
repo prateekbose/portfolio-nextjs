@@ -11,7 +11,7 @@ export default function Footer(){
             <ul>
                 <li><h3>Resources</h3></li>
                 <li><a href="./projects">Projects</a></li>
-                {/* <li><a href="./blogs">Blogs</a></li> */}
+                <li><a href="./blogs">Blogs</a></li>
                 {/* <li><a href="#">About</a></li> */}
             </ul>
             

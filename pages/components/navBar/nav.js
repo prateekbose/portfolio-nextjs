@@ -13,7 +13,7 @@ export default function NavBar({ page }){
             <h1>Prateek Bose</h1>
             <div className={`nav-links ${(!menuOpen)?'nav-hide':''}`}>
                 <a className="nav-link" href={`.${(page === "post")?".":""}/projects`}>Projects</a>
-                {/* <a className="nav-link" href={`.${(page === "post")?".":""}/blogs`}>Blogs</a> */}
+                <a className="nav-link" href={`.${(page === "post")?".":""}/blogs`}>Blogs</a>
                 {/* <a className="nav-link">About</a> */}
             </div>
             <div className={`burger ${(menuOpen)?'burger-active':''}`} onClick={() => openMenu()}>

@@ -12,7 +12,7 @@ export default function Blogs() {
     </Head>,
     <NavBar key={0}/>,
     <HeroSection key={1} header={"My two cents on things I find fascinating"} sub={"Blogs"}/>,
-    <Cards key={2} page={"projects"}/>,
+    <Cards key={2} page={"blogs"}/>,
     <Footer key={4}/>
   ]
 }

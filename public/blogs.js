@@ -6,7 +6,7 @@ let BlogsData = {
         {type: "section", content: [
           {type: "head", text: "Prerequisites"},
           {type: "text", text: "While React Spring provides both hook-based and component-based APIs, for the article we’ll exclusively look at the hook-based API for all of the animations."},
-          {type: "text", text: "For adding the package to your React project,\n For NPM"},
+          {type: "text", text: "For adding the package to your React project,\n For npm"},
           {type: "code", text: "npm install react-spring d3-ease"},
           {type: "text", text: "For yarn"},
           {type: "code", text: "yarn add react-spring d3-ease"},
@@ -20,16 +20,96 @@ let BlogsData = {
           {type: "code-text", textback: "", code: "useChain", textfront: " - To chain or combine multiple animations together."},
           {type: "text", text: "For the article, we’ll look at the most basic hook useSpring."},]}, 
         {type: "section", content: [
-          {type: "head", text: "Basic Reveal Animation"},
+          {type: "head", text: "From and To"},
           {type: "code-text", textback: "To use the ", code: "useSpring", textfront: " hook in out project, we import the hook and animated from the react-spring library. We also import the d3-ease library, though it can be ignored if you want to use other easing functions."},
           {type: "code", text: "import \{ useSpring, animated \} from \‘react-spring\’\nimport \* as easings from \‘d3-ease\’"},
           {type: "text", text: "We import animated, as native elements need to know how to handle the animated props you pass to it. Animate does this by extended these native elements so it can be animated out React (for performance reasons)."},
-          {type: "text", text: "Next we define our spring"},
-          {type: "code", text: "const Animate = useSpring({\n\tfrom: {\n\t\topacity: 0\n\t},\n\tto: {\n\t\topacity: 1\n\t}, \n\tconfig: {\n\t\tduration: 300, \n\t\teasing: easings.easeCubic\n\t}\n})"},
-          {type: "code-text", textback: "This could also be declared as a function like any other function with any number of parameters and the ", code: "useSpring", textfront: " hook as the return field."},
-          {type: "code", text: "const Animate = (visible) => useSpring({\n\tfrom: {\n\t\topacity: 0\n\t},\n\tto: {\n\t\topacity: visible ? 1 : 0\n\t}, \n\tconfig: {\n\t\tduration: 300, \n\t\teasing: easings.easeCubic\n\t}\n})"},
-          {type: "code-sandbox", url: "https://codesandbox.io/embed/wild-flower-xi3f9?fontsize=14&hidenavigation=1&theme=dark&view=preview"}
-        ]}
+          {type: "text", text: "Next we define our spring, the basic structure for using the useSpring hook is: "},
+          {type: "code", text: "const Animate = useSpring({\n\tfrom: {\n\t\t//Initial CSS Properties here\n\t},\n\tto: {\n\t\t//Final CSS Properties here\n\t}\n})"}
+        ]},
+        {type: "section", content: [
+          {type: "head", text: "Using Functions and States"},
+          {type: "code-text", textback: "The ", code: "useSpring", textfront: " hook can also be declared as a function or use state variables to animate the element."},
+          {type: "code", text: "const Animate = (visible) => useSpring({\n\topacity: visible ? '1' : '0'\n\t// other properties...\n})"}
+        ]},
+        {type: "section", content: [
+          {type: "head", text: "Config"},
+          {type: "code-text", textback: "On its own, the previous ", code: "useSpring", textfront: " hooks would result in very abrupt animations."},
+          {type: "code-text", textback: "This is due to the hook using default configurations. This can be customized by using the configuration by mentioning in the ", code: "config", textfront: " section in the hook declaration."},
+          {type: "code", text: "const animation = useSpring({\n\tfrom: {\n\t\t//your properties here...\n\t},\n\tto: {\n\t\t// your properties here...\n\t},\n\tconfig: {\n\t\tmass: 1,\n\t\ttension: 280,\n\t\tfriction: 120,\n\t\tclamp: true\n\t}\n});"},
+          {type: "text", text: "There are few pre-defined presets for the config defined in the library"},
+          {type: "code-text", textback: "", code: "config.default", textfront: " { mass: 1, tension: 170, friction: 26 }"},
+          {type: "code-text", textback: "", code: "config.gentle", textfront: " { mass: 1, tension: 120, friction: 14 }"},
+          {type: "code-text", textback: "", code: "config.wobbly", textfront: " { mass: 1, tension: 180, friction: 12 }"},
+          {type: "code-text", textback: "", code: "config.stiff", textfront: " { mass: 1, tension: 210, friction: 20 }"},
+          {type: "code-text", textback: "", code: "config.slow", textfront: " { mass: 1, tension: 280, friction: 60 }"},
+          {type: "code-text", textback: "", code: "config.molasses", textfront: " { mass: 1, tension: 280, friction: 120 }"},
+          {type: "text", text: " "},
+          {type: "text", text: "These presets can be imported from the library"},
+          {type: "code", text: "import \{ useSpring, animated, config \} from \‘react-spring\’\nimport \* as easings from \‘d3-ease\’\n\nconst animation = useSpring({\n\tfrom: {\n\t\t//your properties here...\n\t},\n\tto: {\n\t\t// your properties here...\n\t},\n\tconfig: {\n\t\t...config.gentle\n\t\tclamp: true\n\t}\n});"},
+        ]},
+        {type: "section", content: [
+          {type: "head", text: "Using React Spring to Animate Typography"},
+          {type: "text", text: "In this section, I'll be demonstrating how we can use React Spring to create beautiful Kinetic Typography, like this one."},
+          {type: "code-sandbox", url: "https://codesandbox.io/embed/wild-flower-xi3f9?fontsize=14&hidenavigation=1&theme=dark&initialpath=%2Ffull-text&view=preview"},
+          {type: "text", text: " "},
+          {type: "code-text", textback: "Firstly, we would have to create the background section and the ", code: "useSpring", textfront: " hook to animate the background."},
+          {type: "code", text: "/* CSS Style for the div */\n\n.back {\n\tposition: absolute;\n\ttop: 0;\n\tleft: 0;\n\theight: 100vh;\n\twidth: 100vw;\n\tdisplay: flex;\n\tflex-direction: column;\n\tz-index: -1;\n\theight: 0vh;\n\tbackground: #ffffff;\n}"},
+          {type: "code", text: "// useSpring hook for div\n\nconst BackAnimate = () => useSpring({\n\tfrom: {\n\t\theight: \"0vh\"\n\t}, \n\tto: {\n\t\theight: \"50vh\"\n\t},\n\tconfig: {\n\t\teasing: easings.easeCubicInOut, \n\t\tduration: 1200\n\t}\n});"},
+          {type: "code-text", textback: "This would add the animation to the background ", code: "<div>", textfront: " which would increase int height to cover 50% oh the viewport height. Notice the config settings, we are using easings and duration instead of physics based animations, as this allows us to set the duration which is not possible with spring based animations."},
+          {type: "code-text", textback: "The hook can be assigned to the ", code: "<div>", textfront: " in the following manner: "},
+          {type: "code", text: "<animated.div className=\"back\" key={1} style={BackAnimate()}></animated.div>"},
+          {type: "code-text", textback: "Notice the the use of ", code:"<animated.div>", textfront: " instead of normal div."},
+          {type: "code-text-mul", text: [
+            {type: "code", text: "animated"},
+            {type: "text", text: " is used to extend native elements, which allows these elements to bypass React for frame updates and improve performance."},
+            {type: "text", text: ". It uses the "},
+            {type: "code", text: "requestAnimationFrame"},
+            {type: "text", text: " from the "},
+            {type: "code", text: "window"},
+            {type: "text", text: "API, which animates the elements in the background at every repaint, instead of using "},
+            {type: "code", text: "state"},
+            {type: "text", text: "variables to animate elements and re-rendering element again at state change, which native React rendering would perform."},
+          ]},
+          {type: "text", text: "This would give us the required background with the aniimation as shown below"},
+          {type: "code-sandbox", url: "https://codesandbox.io/embed/wild-flower-xi3f9?fontsize=14&hidenavigation=1&theme=dark&view=preview"},
+          {type: "code-text", textback: "Next we would create and assign the ", code: "useSpring", textfront: " for the text."},
+          {type: "code-text", textback: "Next we create the text and its styles along with the ", code:"useSpring", textfront: " hook to animate the text. Since we have different directions for different texts, we can include direction in the hook"},
+          {type: "code", text: "/* CSS Styles for the each of the texts */\n\n.one {\n\tcolor: #202020;\n\tdisplay: inline-block;\n\toverflow: hidden;\n}\n\n.two {\n\tcolor: #ffffff;\n\tdisplay:inline-block;\n\toverflow: hidden;\n}"},
+          {type: "code", text: "// useSpring hook for the text\n\nconst TextAnimate = (direction) => useSpring({\n\tfrom: {\n\t\ttransform: `translateY(${direction * 30}vh)` \n\t}, \n\tto: { \n\t\ttransform: \"translateY(0vh)\" \n\t}, \n\tdelay: 1200, \n\tconfig: { \n\t\teasing: easings.easeCubicInOut, \n\t\tduration: 1200 \n\t} \n});"},
+          {type: "code-text-mul", text: [
+            {type: "text", text: "The styles allow the texts to be outside of their original positions, and also stay hidden. We then change the position of the texts to reveal them by the "},
+            {type: "code", text: "useSpring"},
+            {type: "text", text: " hook, which also mentions direction as a parameter. This allows the "},
+            {type: "code", text: "useSpring"},
+            {type: "text", text: " hook to be used for both the texts, with just changing the direction for the translation during the animation using "},
+            {type: "code", text: "template strings"},
+            {type: "text", text: ". The code combined with the background would result in the below animation"},
+          ]},
+          {type: "code-sandbox", url: "https://codesandbox.io/embed/wild-flower-xi3f9?fontsize=14&hidenavigation=1&&initialpath=%2Fhalf-text&theme=dark&view=preview"},
+          {type: "text", text: ""},
+          {type: "code-text", textback: "The animation could be taken further by creating indivdual reveal animations for each word by a loop and modifying the ", code: "useSpring", textfront: " hook in a manner as shown below"},
+          {type: "code", text: '// Modified useSpring hook\n\nconst TextAnimate = (direction, index) => useSpring({ \n\tfrom: { \n\t\ttransform: `translateY(${direction * 30}vh)` \n\t}, \n\tto: { \n\t\ttransform: "translateY(0vh)" }, \n\tdelay: 1200 + index * 300, \n\tconfig: { \n\t\teasing: easings.easeCubicInOut, \n\t\tduration: 1200 \n\t} \n});'},
+          {type: "code", text: '// Text splitting for individual animations \n\n{\"Lorem ipsum dolor sit amet,"\n\t.split(" ")\n\t.map((item, index) => ( \n\t\t<animated.span className="one" key={index} style={TextAnimate(1, index)}>\n\t\t{item}&nbsp;\n\t\t</animated.span>\n))}'},
+          {type: "code-text-mul", text: [
+            {type: "text", text: "The "},
+            {type: "code", text: "split()"},
+            {type: "text", text: " function splits the string into characters using the delimiter passed as parameter, which in this case is "},
+            {type: "code", text: "\" \""},
+            {type: "text", text: " character (whitespace character). Which would create an array of words, over which we iterate to create individual elements with their own animations, with the offset passed as parameter in each iteration to maintain order of reveal. We use the "},
+            {type: "code", text: "&nbsp;"},
+            {type: "text", text: " unicode character to mention whitespace as any whitespaces mention as a JavaScript literal is discarded."}
+          ]},
+          {type: "text", text: "Giving you the final result as shown"},
+          {type: "code-sandbox", url: "https://codesandbox.io/embed/wild-flower-xi3f9?fontsize=14&hidenavigation=1&&initialpath=%2Ffull-text&theme=dark&view=preview"}
+        ],
+      },
+      {type: "section", content: [
+        {type: "head", text: "Resources"},
+        {type: "link-text", textback: "React Spring Docs - ", text: "react-spring.io", url: "https://react-spring.io"},
+        {type: "link-text", textback: "d3-ease Docs - ", text: "github.com/d3/d3-ease", url: "https://github.com/d3/d3-ease"},
+
+      ]}
     ]
 }
 
