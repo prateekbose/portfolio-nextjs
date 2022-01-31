@@ -27,7 +27,7 @@ const Project = () => {
     xhr.onload = function() {
       console.log("Incrementing View Count")
     }
-    xhr.send(`name=${blog}`)
+    setTimeout(() => xhr.send(`name=${blog}`), 30000)
 
   }, [blog])
 
