@@ -57,7 +57,8 @@ const Project = ({ data }) => {
     <Head key={-1}>
       <title>{`${(data[blog][0])?data[blog][0]:"Loading"} \u2014 `}Prateek Bose</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta name="description" content="full stack web developer" data-react-helmet="true"/>
+      <meta name="description" content={data[blog][1]} data-react-helmet="true"/>
+      <meta name="author" content="Prateek Bose" data-react-helmet="true"/>
       <meta property="og:title" content={data[blog][0]} data-react-helmet="true"/>
       <meta property="og:description" content={data[blog][1]} data-react-helmet="true"/>
       <meta property="og:image" content={data[blog][2]} data-react-helmet="true"/>

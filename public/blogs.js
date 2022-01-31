@@ -10,7 +10,7 @@ let BlogsData = {
           {type: "code", text: "npm install react-spring d3-ease"},
           {type: "text", text: "For yarn"},
           {type: "code", text: "yarn add react-spring d3-ease"},
-          {type: "text", text: "Here we’re also adding the package d3-ease for using different easing functions to our animations without creating our own, but also having smoother animations and having endless easing functions at our disposal."},]},
+          {type: "text", text: "Here we’re also adding the package d3-ease for using different easing functions to our animations without creating our own. This allows us to create smoothe animations with numerous easing functions at our disposal."},]},
         {type: "section", content: [
           {type: "head", text: "React Spring Hooks"},
           {type: "code-text", textback: "", code: "useSpring", textfront: " - A single spring, moves from state A to B."},
@@ -62,12 +62,11 @@ let BlogsData = {
           {type: "code-text", textback: "Notice the use of ", code:"<animated.div>", textfront: " instead of normal div."},
           {type: "code-text-mul", text: [
             {type: "code", text: "animated"},
-            {type: "text", text: " is used to extend native elements, which allows these elements to bypass React for frame updates and improve performance."},
-            {type: "text", text: ". It uses the "},
+            {type: "text", text: " is used to extend native elements, which allows these elements to bypass React for frame updates and improve performance. It uses the "},
             {type: "code", text: "requestAnimationFrame"},
             {type: "text", text: " from the "},
             {type: "code", text: "window"},
-            {type: "text", text: "API, which animates the elements in the background at every repaint, instead of using "},
+            {type: "text", text: "API. The API animates the elements in the background at every repaint, instead of using "},
             {type: "code", text: "state"},
             {type: "text", text: "variables to animate elements and re-rendering element again at state change, which native React rendering would perform."},
           ]},
