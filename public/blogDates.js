@@ -1,5 +1,5 @@
 let BlogDates = {
-    "react-spring": "25-01-2022"
+    "react-spring": "31-01-2022"
 }
 
 export default BlogDates

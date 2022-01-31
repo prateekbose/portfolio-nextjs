@@ -1,6 +1,7 @@
-import HeroSection from "../components/heroSection/hero"
 import { useState } from 'react'
-import Highlight from 'react-highlight'
+import dynamic from "next/dynamic"
+const Highlight = dynamic(() => import('react-highlight'))
+const HeroSection = dynamic(() => import("../components/heroSection/hero"))
 
 export default function BlogText({ projectName, project, date, pre }){
     // console.log(project)
@@ -73,7 +74,7 @@ export default function BlogText({ projectName, project, date, pre }){
             )
         } else if(item.type == "code-sandbox") {
             return (
-                <iframe src={item.url}
+                <iframe src={`${item.url}&codemirror=1`}
                     className="code-sandbox"
                     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
                     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
