@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { Helmet } from 'react-helmet'
 import Head from 'next/head'
 import NavBar from '../components/navBar/nav'
 import BlogNames from '../../public/blogNames'
@@ -9,6 +10,10 @@ import BlogText from './blogText'
 import BlogDates from '../../public/blogDates'
 import BlogPre from '../../public/blogPre'
 import Footer from '../components/footer/footer'
+
+const blogs = {
+  "react-spring": ["Introduction to Animations in React using React Spring", "In this article we’ll be exploring one of the best React Frameworks for animations, React Spring, and how you can use React Spring to create simple to complex animations that look beautiful."]
+}
 
 const Project = () => {
 
@@ -32,7 +37,7 @@ const Project = () => {
   }, [blog])
 
   return [
-    <Head key={-1}>
+    <Helmet key={-1}>
       <title>{`${(BlogHeads[blog])?BlogHeads[blog]:"Loading"} \u2014 `}Prateek Bose</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="description" content="full stack web developer" data-react-helmet="true"/>
@@ -45,8 +50,7 @@ const Project = () => {
       <meta name="twitter:description" content="full stack web developer" data-react-helmet="true"/>
       <meta name="keywords" content="prateekbose, prateek, bose, portfolio, full-stack, javascript, react, nextjs" data-react-helmet="true"/>
       <meta name="google-site-verification" content="63_J1iLK9zgMyFUpLRav8VgAIxuUzuMh6VCus7Xb8aU" />
-      
-    </Head>,
+    </Helmet>,
     <NavBar key={0} page={"post"}/>,
     <BlogText project={BlogsData[String(blog)]} projectName={BlogNames[String(blog)]} date={BlogDates[String(blog)]} pre={BlogPre[String(blog)]} key={3}/>,
     <Footer key={4}/>
