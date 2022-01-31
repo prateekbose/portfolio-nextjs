@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import dynamic from "next/dynamic"
+import HeroSection from "../components/heroSection/hero"
 const Highlight = dynamic(() => import('react-highlight'))
-const HeroSection = dynamic(() => import("../components/heroSection/hero"))
 
 export default function BlogText({ projectName, project, date, pre }){
     // console.log(project)
