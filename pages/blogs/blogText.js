@@ -47,6 +47,12 @@ export default function BlogText({ projectName, project, date, pre }){
                     <h1>{item.text}</h1>
                 </div>
             )
+        } else if(item.type == "sub-head"){
+            return (
+                <div className="blog-head blog-section-head blog-section-sub-head">
+                    <h1>{item.text}</h1>
+                </div>
+            )
         } else if(item.type == "link-text"){
             return (
                 <p className="blog-text blog-section-text">{item.textback}<a href={item.url}><code className="code-text">{item.text}</code></a></p>

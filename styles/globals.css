@@ -650,6 +650,11 @@ a{
   letter-spacing: -0.075rem;
 }
 
+.blog-section-sub-head{
+  padding: 0rem 36rem 0.5rem;
+  font-size: 1rem;
+}
+
 .blog-code{
   background-color: #1E1E1E;
   margin: 1rem 36rem;
