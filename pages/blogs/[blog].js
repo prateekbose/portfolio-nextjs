@@ -15,7 +15,7 @@ import Footer from '../components/footer/footer'
 export const getStaticProps = async () => {
   
   const data = {
-    "react-spring": ["Introduction to Animations in React using React Spring", "Learn to use React Spring to create simple to complex animations that look beautiful."]
+    "react-spring": ["Introduction to Animations in React using React Spring", "Learn to use React Spring to create simple to complex animations that look beautiful.", "/blogs/react-spring/head.jpg"]
   }
 
   return {
@@ -60,6 +60,7 @@ const Project = ({ data }) => {
       <meta name="description" content="full stack web developer" data-react-helmet="true"/>
       <meta property="og:title" content={data[blog][0]} data-react-helmet="true"/>
       <meta property="og:description" content={data[blog][1]} data-react-helmet="true"/>
+      <meta property="og:image" content={data[blog][2]} data-react-helmet="true"/>
       <meta property="og:type" content="Website" data-react-helmet="true"/>
       <meta name="twitter:card" content="Blog" data-react-helmet="true"/>
       <meta name="twitter:creator" content="Prateek Bose" data-react-helmet="true"/>
