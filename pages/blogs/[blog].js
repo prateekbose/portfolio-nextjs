@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import NavBar from '../components/navBar/nav'
@@ -10,9 +11,26 @@ import BlogPre from '../../public/blogPre'
 import Footer from '../components/footer/footer'
 
 const Project = () => {
+
   const router = useRouter()
   const { blog } = router.query
   console.log(blog)
+
+  useEffect(() => {
+    const URL = 'https://prateekbose.herokuapp.com/api/blogs'
+    var data = new FormData()
+    data.append('name', blog)
+
+    var xhr = new XMLHttpRequest()
+    xhr.open('POST', URL, true)
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.onload = function() {
+      console.log("Incrementing View Count")
+    }
+    xhr.send(`name=${blog}`)
+
+  }, [blog])
+
   return [
     <Head key={-1}>
       <title>{`${(BlogHeads[blog])?BlogHeads[blog]:"Loading"} \u2014 `}Prateek Bose</title>
