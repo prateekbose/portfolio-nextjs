@@ -11,11 +11,28 @@ import BlogDates from '../../public/blogDates'
 import BlogPre from '../../public/blogPre'
 import Footer from '../components/footer/footer'
 
-const blogs = {
-  "react-spring": ["Introduction to Animations in React using React Spring", "In this article we’ll be exploring one of the best React Frameworks for animations, React Spring, and how you can use React Spring to create simple to complex animations that look beautiful."]
+
+export const getStaticProps = async () => {
+  
+  const data = {
+    "react-spring": ["Introduction to Animations in React using React Spring", "Learn to use React Spring to create simple to complex animations that look beautiful."]
+  }
+
+  return {
+    props: {data: data}
+  }
 }
 
-const Project = () => {
+export const getStaticPaths = async () => {
+  return {
+    paths: [
+      { params: {blog: "react-spring"} }
+    ],
+    fallback: false
+  }
+}
+
+const Project = ({ data }) => {
 
   const router = useRouter()
   const { blog } = router.query
@@ -38,16 +55,16 @@ const Project = () => {
 
   return [
     <Helmet key={-1}>
-      <title>{`${(BlogHeads[blog])?BlogHeads[blog]:"Loading"} \u2014 `}Prateek Bose</title>
+      <title>{`${(data[blog][0])?data[blog][0]:"Loading"} \u2014 `}Prateek Bose</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="description" content="full stack web developer" data-react-helmet="true"/>
-      <meta property="og:title" content={BlogHeads[blog]} data-react-helmet="true"/>
-      <meta property="og:description" content={BlogHeads[blog]} data-react-helmet="true"/>
-      <meta property="og:type" content="website" data-react-helmet="true"/>
-      <meta name="twitter:card" content="summary" data-react-helmet="true"/>
+      <meta property="og:title" content={data[blog][0]} data-react-helmet="true"/>
+      <meta property="og:description" content={data[blog][1]} data-react-helmet="true"/>
+      <meta property="og:type" content="Website" data-react-helmet="true"/>
+      <meta name="twitter:card" content="Blog" data-react-helmet="true"/>
       <meta name="twitter:creator" content="Prateek Bose" data-react-helmet="true"/>
-      <meta name="twitter:title" content="home" data-react-helmet="true"/>
-      <meta name="twitter:description" content="full stack web developer" data-react-helmet="true"/>
+      <meta name="twitter:title" content={data[blog][0]} data-react-helmet="true"/>
+      <meta name="twitter:description" content={data[blog][1]} data-react-helmet="true"/>
       <meta name="keywords" content="prateekbose, prateek, bose, portfolio, full-stack, javascript, react, nextjs" data-react-helmet="true"/>
       <meta name="google-site-verification" content="63_J1iLK9zgMyFUpLRav8VgAIxuUzuMh6VCus7Xb8aU" />
     </Helmet>,
