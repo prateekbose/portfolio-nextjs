@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from "next/link"
 
 export default function NavBar({ page }){
 
@@ -10,7 +11,11 @@ export default function NavBar({ page }){
 
     return (
         <nav className={(menuOpen)?'nav-active':''}>
-            <h1>Prateek Bose</h1>
+            <h1>
+            <Link href="/">
+                <a>Prateek Bose</a>
+            </Link>
+            </h1>
             <div className={`nav-links ${(!menuOpen)?'nav-hide':''}`}>
                 <a className="nav-link" href={`.${(page === "post")?".":""}/projects`}>Projects</a>
                 <a className="nav-link" href={`.${(page === "post")?".":""}/blogs`}>Blogs</a>
