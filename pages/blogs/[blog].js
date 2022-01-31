@@ -54,7 +54,7 @@ const Project = ({ data }) => {
   }, [blog])
 
   return [
-    <Helmet key={-1}>
+    <Head key={-1}>
       <title>{`${(data[blog][0])?data[blog][0]:"Loading"} \u2014 `}Prateek Bose</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="description" content="full stack web developer" data-react-helmet="true"/>
@@ -67,7 +67,7 @@ const Project = ({ data }) => {
       <meta name="twitter:description" content={data[blog][1]} data-react-helmet="true"/>
       <meta name="keywords" content="prateekbose, prateek, bose, portfolio, full-stack, javascript, react, nextjs" data-react-helmet="true"/>
       <meta name="google-site-verification" content="63_J1iLK9zgMyFUpLRav8VgAIxuUzuMh6VCus7Xb8aU" />
-    </Helmet>,
+    </Head>,
     <NavBar key={0} page={"post"}/>,
     <BlogText project={BlogsData[String(blog)]} projectName={BlogNames[String(blog)]} date={BlogDates[String(blog)]} pre={BlogPre[String(blog)]} key={3}/>,
     <Footer key={4}/>
