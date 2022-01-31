@@ -15,7 +15,7 @@ import Footer from '../components/footer/footer'
 export const getStaticProps = async () => {
   
   const data = {
-    "react-spring": ["Introduction to Animations in React using React Spring", "Learn to use React Spring to create simple to complex animations that look beautiful.", "/blogs/react-spring/head.jpg"]
+    "react-spring": ["Introduction to Animations in React using React Spring", "Learn to use React Spring to create simple to complex animations that look beautiful.", "https://prateekbose.tech/blogs/react-spring/head.jpg"]
   }
 
   return {
